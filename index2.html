@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<title>Curbside Entertainment Network | Sports Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:100%">
+
+<!-- Header -->
+<header class="w3-container w3-black w3-container w3-center w3-padding-10 w3-top" style="width:100%;position:sticky"> 
+  <h1 class = "w3-font-white"><b>Curbside Entertainment</b></h1>
+  <p>Prsenting Opinions and Analysis from Broderick O'Linn</p>
+</header>
+
+<!-- Grid -->
+<div id = "grid" class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry 2 -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="bp2.jpg" alt="Warriors" style="width:100%">
+    <div class="w3-container">
+      <h3><b>How the NBA's Non-Bubble teams Can Improve in 2021</b></h3>
+      <h5>Published on, <span class="w3-opacity">Jul 19, 2020</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>How to improve.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry 1 -->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="bp1.jpg" alt="Bucks and Lakers" style="width:100%">
+    <div class="w3-container">
+      <h3><b>NBA Power Rankings Heading into the Restart</b></h3>
+      <h5>Published on, <span class="w3-opacity">July 7, 2020</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Ranking all 22 NBA teams invited to the bubble.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border" onClick="openArt('art1')"><b>READ MORE »</b></button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+  <img src="broj.jpg" alt="Broderick" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>About Me</b></h4>
+      <p>I'm Broderick O'Linn. I know a lot about basketball. Local pickup legend, staged the largest comeback in pinguard history, known
+      for hitting the inhaler nonstop during Cross Country races. Most recently dominated just about every UGA intramural sport.</p>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin w3-hide">
+    <div class="w3-container w3-padding">
+      <h4>Popular Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Lorem</span><br>
+        <span>Sed mattis nunc</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ipsum</span><br>
+        <span>Praes tinci sed</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Dorum</span><br>
+        <span>Ultricies congue</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Mingsum</span><br>
+        <span>Lorem ipsum dipsum</span>
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">NBA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Bubble</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">LeBron</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">JR Smith</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Food</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Giannis</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Adam Silver</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Disney</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Updates</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Playoffs</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Rankings</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+</footer>
+
+<script>
+
+function openArt(artNum) {
+  var i;
+  var x = document.getElementsByClassName("article");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(artNum).style.display = "block";  
+}
+
+</script>
+
+</body>
+</html>
