@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-<title>Curbside Entertainment Network | Sports Blog</title>
+<title>Curbside Entertainment</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
+.home {}
+.article {}
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-grey">
@@ -16,40 +18,44 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <!-- Header -->
 <header class="w3-container w3-black w3-container w3-center w3-padding-10 w3-top" style="width:100%;position:sticky"> 
-  <h1 class = "w3-font-white"><b>Curbside Entertainment</b></h1>
-  <p>Prsenting Opinions and Analysis from Broderick O'Linn</p>
+  <div class = "w3-content" style = "width:60%">
+    <img class = "w3-left w3-round-xlarge w3-opacity" style="display:inline;width:300px;height:100px" src="images/logo.png" alt="CEN">
+    <h1 class = "w3-font-white"><b>Curbside Entertainment Network</b></h1>
+    <p>Presenting Opinions and Analysis for the Sporting World</p>
+  </div>
 </header>
 
 <!-- Grid -->
-<div id = "grid" class="w3-row">
+<div id = "grid" class="w3-row home">
 
 <!-- Blog entries -->
 <div class="w3-col l8 s12">
   <!-- Blog entry 2 -->
   <div class="w3-card-4 w3-margin w3-white">
-    <img src="bp2.jpg" alt="Warriors" style="width:100%">
+    <img src="images/bp2.jpg" alt="Warriors" style="width:100%;height:400px">
     <div class="w3-container">
       <h3><b>How the NBA's Non-Bubble teams Can Improve in 2021</b></h3>
-      <h5>Published on, <span class="w3-opacity">Jul 19, 2020</span></h5>
+      <h5>by <b>Broderick O'Linn</b> <br> Published: <span class="w3-opacity">Jul 19, 2020</span></h5>
     </div>
 
     <div class="w3-container">
       <p>How to improve.</p>
       <div class="w3-row">
         <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+          <p><button class="w3-button w3-padding-large w3-white w3-border" onClick="openArt('art2')"><b>READ MORE »</b></button></p>
         </div>
       </div>
     </div>
   </div>
   <hr>
+  <!-- End Blog Entry 2 -->
 
-  <!-- Blog entry 1 -->
+  <!-- Blog Entry 1 -->
   <div class="w3-card-4 w3-margin w3-white">
-  <img src="bp1.jpg" alt="Bucks and Lakers" style="width:100%">
+  <img src="images/bp1.jpg" alt="Bucks and Lakers" style="width:100%;height:400px">
     <div class="w3-container">
       <h3><b>NBA Power Rankings Heading into the Restart</b></h3>
-      <h5>Published on, <span class="w3-opacity">July 7, 2020</span></h5>
+      <h5>by <b>Broderick O'Linn</b> <br> Published: <span class="w3-opacity">July 7, 2020</span></h5>
     </div>
 
     <div class="w3-container">
@@ -61,6 +67,8 @@ and is wrapped around the whole page content, except for the footer in this exam
       </div>
     </div>
   </div>
+
+
 <!-- END BLOG ENTRIES -->
 </div>
 
@@ -68,15 +76,14 @@ and is wrapped around the whole page content, except for the footer in this exam
 <div class="w3-col l4">
   <!-- About Card -->
   <div class="w3-card w3-margin w3-margin-top">
-  <img src="broj.jpg" alt="Broderick" style="width:100%">
+  <img src="images/logopic.png" alt="CNE" style="width:100%">
     <div class="w3-container w3-white">
-      <h4><b>About Me</b></h4>
-      <p>I'm Broderick O'Linn. I know a lot about basketball. Local pickup legend, staged the largest comeback in pinguard history, known
-      for hitting the inhaler nonstop during Cross Country races. Most recently dominated just about every UGA intramural sport.</p>
+      <h4><b>About Us</b></h4>
+      <p>We are Curbside Entertainment Group, a collection of guys who like to meet up and talk all things sports. We host a weekly Podcast on Spotify in addition to online content from our team.</p>
     </div>
   </div><hr>
   
-  <!-- Posts -->
+  <!-- Posts HIDDEN SIDEBAR FOR NOW-->
   <div class="w3-card w3-margin w3-hide">
     <div class="w3-container w3-padding">
       <h4>Popular Posts</h4>
@@ -105,8 +112,9 @@ and is wrapped around the whole page content, except for the footer in this exam
     </ul>
   </div>
   <hr> 
+  <!-- Posts HIDDEN SIDEBAR FOR NOW-->
  
-  <!-- Labels / tags -->
+  <!-- Labels / tags - DOESN'T MEAN ANYTHING RIGHT NOW-->
   <div class="w3-card w3-margin">
     <div class="w3-container w3-padding">
       <h4>Tags</h4>
@@ -127,22 +135,33 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- END GRID -->
 </div><br>
 
-<!-- END w3-content -->
+<!-- END homepage content -->
 </div>
 
-<!-- Footer -->
+<!-- Article Content Start -->
+
+<div id = "art1" class="w3-content w3-card article" style="display:none;max-width:100%">
+<h1>NBA Power Rankings Heading into the Restart</h1>
+<p>Text goes here.</p>
+</div>
+
+<!-- Article Content End -->
+
+<!-- Footer Start -->
 <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
   <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
   <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
 </footer>
+<!-- Footer End -->
+
 
 <script>
 
 function openArt(artNum) {
   var i;
-  var x = document.getElementsByClassName("article");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  var y = document.getElementsByClassName("home");
+  for (i = 0; i < y.length; i++) {
+    y[i].style.display = "none";  
   }
   document.getElementById(artNum).style.display = "block";  
 }

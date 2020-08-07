@@ -1,0 +1,1 @@
+cd "C:\Users\Jack Rager\Downloads\Projects\jackrager.github.io"
