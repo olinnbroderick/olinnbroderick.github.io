@@ -9,27 +9,41 @@
 <style>
 .home {}
 .article {}
+.headr {margin: auto;}
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-grey">
 
-<!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
+<!-- Content - Entire Webpage -->
 <div class="w3-content" style="max-width:100%">
 
-<!-- Header -->
-<header class="w3-container w3-black w3-container w3-center w3-padding-10 w3-top" style="width:100%;position:sticky"> 
-  <div class = "w3-content" style = "width:60%">
-    <img class = "w3-left w3-round-xlarge w3-opacity" style="display:inline;width:300px;height:100px" src="images/logo.png" alt="CEN">
-    <div style="display:inline">
-      <h1 class = "w3-font-white"><b>Curbside Entertainment Network</b></h1>
-      <p>Presenting Opinions and Analysis for the Sporting World</p>
-    </div>
-    <i class="fa fa-spotify w3-large" style="display:inline"></i>
+<!-- Start Header -->
+<header class="w3-container w3-black w3-container w3-center w3-padding-10 w3-top" style="height: 100%;display: grid;width:100%;position:sticky"> 
+  <div class = "w3-content" style = "width:70%;margin-left: 180px;">
+    <table class="w3-table w3-centered">
+      <tr>
+        <th class = "headr"><div style = "margin: 20px 1px 10px 1px;">
+          <img class = "w3-left w3-round-xlarge w3-opacity w3-border-white" style="border:12px;display:inline;width:300px;height:100px" src="images/logo.png" alt="CEN">
+        </th>
+        <th class = "headr"><div style = "margin: 20px 0px 5px 1px;">
+            <h1 class = "w3-font-white"><b>Curbside Entertainment Network</b></h1>
+            <p>Colorful Opinions and Quality Analysis for the Sporting World</p>
+        </div></th>
+        <th>
+          <div style = "margin: 50px 5px 50px 0px;"><i class="fa fa-spotify w3-xxxlarge"></i></div>
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div class="w3-bar">
+      <button class="w3-bar-item w3-button" >Home</button>
+      <button class="w3-bar-item w3-button">About Us</button>
   </div>
 </header>
+<!-- End Header -->
 
-<!-- Grid -->
+
+<!-- Start Grid / Main Page Content -->
 <div id = "grid" class="w3-row home">
 
 <!-- Blog entries -->
@@ -63,7 +77,14 @@ and is wrapped around the whole page content, except for the footer in this exam
     </div>
 
     <div class="w3-container">
-      <p>Ranking all 22 NBA teams invited to the bubble.</p>
+      <p>This is my comprehensive list on each team ranked heading back into the NBA season. I used a mixture of criteria to put these teams in order: <br></p>
+      <ol>
+      <li>Looked at where they left off when the season came to an abrupt stop. </li>
+      <li>Looked at the players they have available for when the season resumes. </li>
+      <li>Glanced at how the multiple month layoff may have affected each of the teams. </li>
+      <li>Take a look at their schedule and style of play and how those two could help or hurt them. </li>
+      </ol>
+      <p>Certain criteria will be talked about more for specific teams. Some teams have no chance in hell and will barely be talked about. Others may need long explanations but are ranked particularly low. I even predicted some of the offseason moves for teams that I don’t think have any chance. All will be described in these rankings. </p>
       <div class="w3-row">
         <div class="w3-col m8 s12">
           <p><button class="w3-button w3-padding-large w3-white w3-border" onClick="openArt('art1')"><b>READ MORE »</b></button></p>
@@ -82,8 +103,8 @@ and is wrapped around the whole page content, except for the footer in this exam
   <div class="w3-card w3-margin w3-margin-top">
   <img src="images/logopic.png" alt="CNE" style="width:100%">
     <div class="w3-container w3-white">
-      <h4><b>About Us</b></h4>
-      <p>We are Curbside Entertainment Group, a collection of guys who like to meet up and talk all things sports. We host a weekly Podcast on Spotify in addition to online content from our team.</p>
+      <h4><b>About CEN</b></h4>
+      <p>We are Curbside Entertainment Group, a group of guys who like to meet up and talk all things sports. We host a Podcast on Spotify, with new episodes every Monday, Wednesday, and Friday, in addition to the online content that we share on this page.</p>
     </div>
   </div><hr>
   
@@ -118,8 +139,8 @@ and is wrapped around the whole page content, except for the footer in this exam
   <hr> 
   <!-- Posts HIDDEN SIDEBAR FOR NOW-->
  
-  <!-- Labels / tags - DOESN'T MEAN ANYTHING RIGHT NOW-->
-  <div class="w3-card w3-margin">
+  <!-- Labels / tags - DOESN'T MEAN ANYTHING RIGHT NOW SO ITS ALSO HIDDEN-->
+  <div class="w3-card w3-margin w3-hide">
     <div class="w3-container w3-padding">
       <h4>Tags</h4>
     </div>
@@ -142,12 +163,9 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- END homepage content -->
 </div>
 
-<!-- Article Content Start -->
+<!-- Article Content Iframes Start -->
 
-<div id = "art1" class="w3-content w3-card article" style="display:none;max-width:100%">
-<h1>NBA Power Rankings Heading into the Restart</h1>
-<p>Text goes here.</p>
-</div>
+<iframe id="art1" src="art1.html" style = "height:1000px;width:100%;display:none"></iframe>
 
 <!-- Article Content End -->
 
@@ -163,11 +181,18 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 function openArt(artNum) {
   var i;
-  var y = document.getElementsByClassName("home");
-  for (i = 0; i < y.length; i++) {
-    y[i].style.display = "none";  
+  var x = document.getElementsByClassName("home");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
   }
-  document.getElementById(artNum).style.display = "block";  
+  var y = document.getElementById(artNum)
+  y.style.display = "block"; 
+  y.onload = function(){
+        y.style.height = y.contentWindow.document.body.scrollHeight + 'px';
+    } 
+
+  //var x = location.pathname;
+  //location.replace(x + artNum);
 }
 
 </script>
