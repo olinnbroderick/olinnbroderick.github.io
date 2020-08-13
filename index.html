@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = 0;
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+</script>
+</head>
 <title>Curbside Entertainment</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,26 +26,24 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-content" style="max-width:100%">
 
 <!-- Start Header -->
-<header class="w3-container w3-black w3-container w3-center w3-padding-10 w3-top" style="height: 100%;display: grid;width:100%;position:sticky"> 
-  <div class = "w3-content" style = "width:70%;margin-left: 180px;">
-    <table class="w3-table w3-centered">
+<header class="w3-container w3-dark-grey w3-center w3-top" style="height: 70%;display: grid;width:100%;position:sticky"> 
+  <div class = "w3-content" style = "max-width:100%;margin-left: 220px;">
+    <table class="w3-table w3-centered" style = "line-height: normal">
       <tr>
-        <th class = "headr"><div style = "margin: 20px 1px 10px 1px;">
-          <img class = "w3-left w3-round-xlarge w3-opacity w3-border-white" style="border:12px;display:inline;width:300px;height:100px" src="images/logo.png" alt="CEN">
-        </th>
-        <th class = "headr"><div style = "margin: 20px 0px 5px 1px;">
-            <h1 class = "w3-font-white"><b>Curbside Entertainment Network</b></h1>
-            <p>Colorful Opinions and Quality Analysis for the Sporting World</p>
-        </div></th>
-        <th>
-          <div style = "margin: 50px 5px 50px 0px;"><i class="fa fa-spotify w3-xxxlarge"></i></div>
-        </th>
+        <td class = "headr"><div style = "margin: 5px 1px 0px 1px;">
+          <img class = "w3-left w3-round-xlarge w3-border-white" style="border:12px;display:inline;width:250px;height:90px" src="images/logo.png" alt="CEN"></td>
+        <td class = "headr"><div style = "margin: 10px 0px 0px 1px;">
+            <h2 class = "w3-font-white"><b>CURBSIDE ENTERTAINMENT NETWORK</b></h2>
+            <p>Colorful Opinions and Quality Analysis for the Sporting World</p></div></td>
+        <td><a href="https://open.spotify.com/show/4OWd8eMXLigQgyM8iuvfqx?si=_2x-QumeS-GtXN4jAFibdA">
+            <div style = "margin: 5px 5px 0px 0px;"><i class="fa fa-spotify w3-xxlarge w3-hover-opacity"></i></div></a>
+          <p>Check out our <br> podcast on Spotify!</p></td>
       </tr>
     </table>
   </div>
   <div class="w3-bar">
-      <button class="w3-bar-item w3-button" >Home</button>
-      <button class="w3-bar-item w3-button">About Us</button>
+      <button class="w3-bar-item w3-button w3-border-top w3-border-white">Home</button>
+      <button class="w3-bar-item w3-button w3-border-top w3-border-white">About Us</button>
   </div>
 </header>
 <!-- End Header -->
@@ -57,7 +63,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
 
     <div class="w3-container">
-      <p>How to improve.</p>
+        <p>For eight unfortunate teams, they were not invited to the bubble. They don’t get to engage in college activities and relive their days in the dorm while playing professional basketball in Orlando. I can’t tell if these players absolutely hate the bubble or are enjoying the hell out of being in close proximity to over 300 NBA players. Either way, the NBA told eight teams that they sucked too much throughout the year and won’t have the opportunity to shotgun beers and possibly play eight or more meaningless games of basketball unless you’re a title contender. In my power rankings list, I went over a few things I want to see from teams in the offseason that I don’t think will win it all. This list will cover any offseason recommendation I have or how to fix various teams. I wish I could just be the GM of several of these teams because half of them should not have been in this lottery mix for so long. Overall, this is a weak free agency and draft class so it’s hard to make too many recommendations regarding those areas. It was difficult to pinpoint some of these teams because there aren’t a whole lot of moves to make. Without further ado, here are my suggestions for each team...</p>
       <div class="w3-row">
         <div class="w3-col m8 s12">
           <p><button class="w3-button w3-padding-large w3-white w3-border" onClick="openArt('art2')"><b>READ MORE »</b></button></p>
@@ -108,52 +114,6 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div><hr>
   
-  <!-- Posts HIDDEN SIDEBAR FOR NOW-->
-  <div class="w3-card w3-margin w3-hide">
-    <div class="w3-container w3-padding">
-      <h4>Popular Posts</h4>
-    </div>
-    <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Lorem</span><br>
-        <span>Sed mattis nunc</span>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Ipsum</span><br>
-        <span>Praes tinci sed</span>
-      </li> 
-      <li class="w3-padding-16">
-        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Dorum</span><br>
-        <span>Ultricies congue</span>
-      </li>   
-      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Mingsum</span><br>
-        <span>Lorem ipsum dipsum</span>
-      </li>  
-    </ul>
-  </div>
-  <hr> 
-  <!-- Posts HIDDEN SIDEBAR FOR NOW-->
- 
-  <!-- Labels / tags - DOESN'T MEAN ANYTHING RIGHT NOW SO ITS ALSO HIDDEN-->
-  <div class="w3-card w3-margin w3-hide">
-    <div class="w3-container w3-padding">
-      <h4>Tags</h4>
-    </div>
-    <div class="w3-container w3-white">
-    <p><span class="w3-tag w3-black w3-margin-bottom">NBA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Bubble</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">LeBron</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">JR Smith</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Food</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Giannis</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Adam Silver</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Disney</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Updates</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Playoffs</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Rankings</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
-    </p>
-    </div>
-  </div>
-  
 <!-- END Introduction Menu -->
 </div>
 
@@ -165,7 +125,8 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- Article Content Iframes Start -->
 
-<iframe id="art1" src="art1.html" style = "height:1000px;width:100%;display:none"></iframe>
+<iframe id="art1" src="art1.html" frameborder="0" scrolling="no" style = "height:9500px;width:100%;display:none"></iframe>
+<iframe id="art2" src="art2.html" frameborder="0" scrolling="no" style = "height:6800px;width:100%;display:none"></iframe>
 
 <!-- Article Content End -->
 
@@ -187,12 +148,7 @@ function openArt(artNum) {
   }
   var y = document.getElementById(artNum)
   y.style.display = "block"; 
-  y.onload = function(){
-        y.style.height = y.contentWindow.document.body.scrollHeight + 'px';
-    } 
-
-  //var x = location.pathname;
-  //location.replace(x + artNum);
+  document.documentElement.scrollTop = 0;
 }
 
 </script>
